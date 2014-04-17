@@ -12,7 +12,7 @@ WORKDIR /root
 # software-properties is used for add-apt-repository command
 # python-software-properties is used for nodejs
 RUN apt-get update
-RUN apt-get dist-upgrade
+RUN apt-get -y dist-upgrade
 RUN apt-get install -y software-properties-common python-software-properties git unzip ruby-full rubygems1.8
 RUN add-apt-repository -y ppa:chris-lea/node.js
 RUN apt-get update
