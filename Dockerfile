@@ -44,10 +44,10 @@ WORKDIR /home/user
 
 
 # Download npm dependencies
-#RUN npm install
+#RUN [ -e /home/user/application/node_modules ] || npm install
 
 # Download bower dependencies
-#RUN bower install
+#RUN [ -e /home/user/application/app/bower_components ] || bower install
 
 # Application will listen on 9000 port number
 #EXPOSE 9000
