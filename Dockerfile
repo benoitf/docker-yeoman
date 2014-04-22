@@ -28,6 +28,8 @@ RUN npm install -g yo generator-angular
 # Add a user
 RUN adduser --disabled-password --home=/home/user --gecos "" user
 
+# Add some files that can be used for angular-seed project
+ADD grunt-required.zip /home/user/grunt-required.zip
 
 # Run all operations in user mode
 USER user
