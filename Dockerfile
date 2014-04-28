@@ -31,6 +31,9 @@ RUN adduser --disabled-password --home=/home/user --gecos "" user
 # Add some files that can be used for angular-seed project
 ADD grunt-required.zip /home/user/grunt-required.zip
 
+# Grunt will listen on 9000 port number
+EXPOSE 9000
+
 # Run all operations in user mode
 USER user
 ENV HOME /home/user
@@ -50,9 +53,5 @@ WORKDIR /home/user
 
 # Download bower dependencies
 #RUN [ -e /home/user/application/app/bower_components ] || bower install
-
-# Application will listen on 9000 port number
-#EXPOSE 9000
-
 
 #CMD grunt serve
